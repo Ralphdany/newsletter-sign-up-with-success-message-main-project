@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;1,500&family=Inter&family=Karla:wght@400;700&family=Montserrat:ital,wght@0,500;0,600;1,600&family=Open+Sans&family=Outfit:wght@500&family=Poppins&family=Red+Hat+Display:ital,wght@1,900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;1,500&family=Inter&family=Karla:wght@400;700&family=Montserrat:ital,wght@0,500;0,600;1,600&family=Open+Sans&family=Outfit:wght@500&family=Poppins&family=Red+Hat+Display:ital,wght@1,900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  </head>
+  <body>
+
+    <section>
+      <div class="update">
+        <h1>Stay updated!</h1>
+        <p>
+          Join 60,000+ product managers receiving monthly updates on :
+        </p>
+        <ul>
+
+          <li>Product discovery and building what matters</li>
+
+          <li>Measuring to ensure updates are a success</li>
+
+          <li>And much more!</li>
+
+        </ul>
+        <form action="#" name="form1"  >
+        <div class="label-container">
+          <label for="email">
+            Email address
+          </label>
+          <small id="error"></small>
+        </div>
+        
+        <input type="text" name="Email" id="email"  placeholder="email@company.com">
+        <button type="submit"  onclick="handleSubmit()">
+          <a href="#" id="sub-complete" style="color: white; text-decoration: none;">Subscribe to monthly newsletter</a>
+        </button>
+      </form>
+      </div>
+      <div class="illustration">
+
+      </div>
+    </section>
+
+    <script>
+
+     
+     
+
+     function handleSubmit () {
+
+      const mailFormat =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      const inputEmail = document.getElementById('email');
+
+      var emailValue = inputEmail.value;
+
+      const error_message = document.getElementById('error');
+      
+
+      if (emailValue.match(mailFormat)){
+
+     
+      // inputEmail.style.border = '1px solid gray';
+      // inputEmail.style.backgroundColor = 'white';
+      // error_message.innerText = '';
+      // error_message.style.color = 'white';
+      window.location.href="complete.html";
+      // alert('valid Email');
+      
+
+    return true;
+
+
+      
+     }
+
+     else{
+      inputEmail.style.border = '1px solid red';
+      inputEmail.style.backgroundColor = 'rgba(252, 16, 16, 0.37)';
+      error_message.innerText = 'Valid email required';
+      error_message.style.color = 'red';
+      
+      // alert('Invalid Email');
+
+      return false;
+     }
+   
+    }
+    
+    </script>
+  </body>
+</html>

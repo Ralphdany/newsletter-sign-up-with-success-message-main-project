@@ -1,0 +1,90 @@
+:root{
+    --Dark_Slate_Grey: hsl(234, 29%, 20%);
+    --Charcoal_Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 69%, 65%);
+    --tomato_shadow:hsla(19, 93%, 56%, 0.212);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Charcoal_Grey);
+}
+section{
+    height: 300px;
+    max-width: 250px;
+    width: 90%;
+    padding: 1rem;
+    background-color: var(--White);
+    border-radius: 1rem;
+}
+section h1{
+    color: var(--Dark_Slate_Grey);
+    margin-top: 1rem;
+}
+section p{
+    color: var(--Charcoal_Grey);
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+section p span{
+    color: var(--Dark_Slate_Grey);
+    font-weight: 700;
+}
+
+section button{
+    background-color: var(--Dark_Slate_Grey);
+    color: var(--White);
+    border: none;
+    border-radius:.3rem ;
+    padding: .8rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+   
+}
+section button:hover{
+    background-color: var(--Tomato);
+    box-shadow: 0px 20px 10px var(--tomato_shadow);
+    transition: 0.4s;
+}
+
+@media screen  and (max-width:375px){
+    
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vh;
+    height: 100vh;
+    border-radius: 0px;
+}
+section img{
+    height: 55px;
+    width: 55px;
+}
+section h1{
+    font-size: 30px;
+    justify-self: center;
+}
+section p{
+    font-size: 20px;
+    justify-self: center;
+    
+}
+.container{
+    margin-top: 40%;
+}
+
+    
+}

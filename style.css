@@ -1,0 +1,131 @@
+:root{
+    --Dark_Slate_Grey: hsl(234, 29%, 20%);
+    --Charcoal_Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 69%, 65%);
+    --tomato_shadow:hsla(19, 93%, 56%, 0.212);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Charcoal_Grey);
+
+}
+section{
+    display: grid;
+    max-width: 620px;
+    width: 90%;
+    grid-template-columns: 60% 40%;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem .7rem .7rem 1rem;
+    height: 25rem;
+    margin-left: 0px;
+}
+.update{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.update h1{
+    color: var(--Dark_Slate_Grey);
+    font-size:2rem;
+    margin-bottom: 1rem;
+}
+.update p{
+  color: var(--Charcoal_Grey);
+  font-size: .8rem;
+}
+.update ul{
+    padding: 0 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.update ul li{
+    list-style-image:url(assets/images/icon-list.svg) ;
+    color: var(--Charcoal_Grey);
+    font-size: .8rem;
+    padding: .2rem .1rem;
+}
+.update label{
+ color: var(--Dark_Slate_Grey);
+ margin-bottom: .5rem;
+ font-size: .8rem;
+ font-weight: 700;
+}
+.label-container{
+    display: flex;
+    padding-bottom: 1px;
+    justify-content: space-between;
+    
+}
+.update input{
+    width: 100%;
+  padding: .8rem;
+  border-radius: .3rem;
+  border: 1px solid var(--Charcoal_Grey);
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 1rem;
+}
+.update input:hover{
+    border: 2px solid var(--Charcoal_Grey);
+}
+.update button{
+    background-color: var(--Dark_Slate_Grey);
+    color: var(--White);
+    border: none;
+    border-radius:.3rem ;
+    padding: .8rem;
+    cursor: pointer;
+    width: 100%;
+}
+.update button:hover{
+    background-color: var(--Tomato);
+    box-shadow: 0px 20px 10px var(--tomato_shadow);
+    transition: 0.4s;
+}
+.illustration{
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+}
+@media screen and (max-width:600px) {
+    body{
+
+    
+    }
+    section{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 80%;
+        height:100vh;
+        border-radius: 0rem;
+        padding: 0rem;
+        margin-right: 0px;
+
+    }
+.illustration{
+    width:100%;
+    border-radius: 0rem 0rem 1rem 1rem;
+    height: 30vh;
+}
+.update{
+    width: 100%;
+    height: 70%;
+    align-self: center;
+}
+
+}
